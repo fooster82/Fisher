@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import './style.css'
+import React, { useState } from 'react';
+// import './style.css';
 
 export function Button() {
         const [ faved, setFaved ] = useState(false);

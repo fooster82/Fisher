@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --watchAll",
     "dev": "webpack serve --mode development --config config/dev.webpack.config.js",
     "build": "webpack --mode production",
     "storybook": "start-storybook -p 6006",
@@ -24,6 +24,9 @@
     "@storybook/builder-webpack5": "^6.3.12",
     "@storybook/manager-webpack5": "^6.3.12",
     "@storybook/react": "^6.3.12",
+    "@testing-library/jest-dom": "^5.11.10",
+    "@testing-library/react": "^11.2.6",
+    "@testing-library/user-event": "^13.1.1",
     "babel-loader": "^8.2.3",
     "css-loader": "^6.5.0",
     "file-loader": "^6.2.0",
@@ -34,6 +37,7 @@
     "webpack-dev-server": "^4.4.0"
   },
   "dependencies": {
+    "jest": "^27.3.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   }
