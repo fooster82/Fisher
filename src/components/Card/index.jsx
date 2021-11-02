@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import './style.css';
-import { heartButton } from '../heartButton'
+import { Button } from '../Button'
 
  export const Card = ({ title, release, artwork }) => {
     const [ released, setReleased ] = useState(true)
@@ -18,7 +18,7 @@ import { heartButton } from '../heartButton'
                 <img src={artwork} alt="album cover" />
                 <h3>{title}</h3>
                 <em style={{display: released ? 'none' : 'initial'}}>Released in the year {release}</em> <br /> <br />
-                <heartButton />
+                <Button />
         </div>
     )
 }
