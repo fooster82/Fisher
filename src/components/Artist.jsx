@@ -1,15 +1,14 @@
 import React from 'react';
-import { Album } from './Album';
 import { Card } from './Card/index';
 
 const albums = [
-    { title: 'Freaks', release: 2020},
-    { title: 'Losing it', release: 2018},
-    { title: 'Oi Oi', release: 2017}
+    { title: 'Freaks', release: 2020, artwork: ''},
+    { title: 'Losing it', release: 2018, artwork: ''},
+    { title: 'Oi Oi', release: 2017, artwork: './Card/assets/oioi_fisher.jpg'}
 ]
 
 export function Artist() {
-    const renderAlbums = () => albums.map((a,i) => <Card key={i} title={a.title} release={a.release}/>)
+    const renderAlbums = () => albums.map((a,i) => <Card key={i} title={a.title} release={a.release} artwork={a.artwork}/>)
     return (
         <div id='artist-div'>
             <h1>Fisher</h1>
