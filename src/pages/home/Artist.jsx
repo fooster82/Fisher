@@ -1,6 +1,5 @@
 import React from 'react';
-import { Card } from './Card/index';
-import { GigsCard } from './GigsCard'
+import { Card } from '../../components/Card/index';
 
 const albums = [
     { title: 'Freaks', release: 2020, artwork: ''},
@@ -19,7 +18,6 @@ export function Artist() {
                 { renderAlbums() }
                 
             </ol>
-            <div><GigsCard /></div>
         </div>
     )
 }
