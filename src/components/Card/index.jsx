@@ -15,7 +15,7 @@ import { Button } from '../Button'
             className={`card`}
         >
                 <p>FISHER</p>
-                <img src={artwork} alt="album cover" />
+                <img src={artwork} alt="album cover" className='image'/>
                 <h3>{title}</h3>
                 <em style={{display: released ? 'none' : 'initial'}}>Released in the year {release}</em> <br /> <br />
                 <Button />
