@@ -9,8 +9,6 @@ export function Gigs() {
             try {
                 let opts = { headers: {'Accept': 'application/json'} }
                 let { data } = await axios.get('https://rest.bandsintown.com/artists/fisher/events?app_id=510', opts);
-                // setGigs([data])
-                
                     let gigData = [];
                     for(let i=0 ; i<data.length; i++) {
                         gigData[i] = [data[i].datetime.slice(0,10), data[i].venue.city, data[i].venue.country]

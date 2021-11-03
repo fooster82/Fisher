@@ -2,9 +2,9 @@ import React from 'react';
 import { Card } from '../../components/Card/index';
 
 const albums = [
-    { title: 'Freaks', release: 2020, artwork: ''},
-    { title: 'Losing it', release: 2018, artwork: ''},
-    { title: 'Oi Oi', release: 2017, artwork: './Card/assets/oioi_fisher.jpg'}
+    { title: 'Freaks', release: 2020, artwork: 'https://www.edmtunes.com/wp-content/uploads/2020/03/FISHER_FREAKS_EP_WF3_logo5-1-scaled.jpg'},
+    { title: 'Losing it', release: 2018, artwork: 'https://static.qobuz.com/images/covers/5a/ot/apgv94yjoot5a_600.jpg'},
+    { title: 'Oi Oi', release: 2017, artwork: 'https://cdn.shopify.com/s/files/1/2667/5284/files/oi_oi_large.jpg?v=1516818157'}
 ]
 
 export function Artist() {
