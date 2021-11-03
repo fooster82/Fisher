@@ -1,30 +1,12 @@
-import React, { useState, useEffect } from "react";
-import axios from 'axios';
+import React from "react";
+import './style.css';
 
-export const GigsCard = () => {
-    const [ gigs, setGigs ] = useState([])
-    
-    useEffect(() => {
-        const fetchGigs = async () => {
-            try {
-                let opts = { headers: {'Accept': 'application/json'} }
-                let { data } = await axios.get('https://rest.bandsintown.com/artists/fisher/events?app_id=510', opts);
-                setGigs(data.datetime)
-                console.log(data.description)
-            } catch(err) {
-                console.warn(err);
-            }
-        }
-        fetchGigs()
-        
-    }, [])
+ export const GigsCard = ({ date, city, country }) => {
     return (
-        gigs.map(gig => {
-            <div>
-                <h1>Upcoming gigs</h1>
-                <p>{gig.datetime}, </p>
-            </div>
-        })
+        <div className={`gig-card`}>
+                <p>FISHER</p>
+                <h3>When? { date }</h3>
+                <h3>Where? { city } in { country }</h3>
+        </div>
     )
 }
-
