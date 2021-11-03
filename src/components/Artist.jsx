@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card } from './Card/index';
+import { GigsCard } from './GigsCard'
 
 const albums = [
     { title: 'Freaks', release: 2020, artwork: ''},
@@ -16,7 +17,9 @@ export function Artist() {
             <h3>Fisher was born and raised on the Gold Coast of Australia, where he pursued a career as a professional surfer for many years.</h3>
             <ol>
                 { renderAlbums() }
+                
             </ol>
+            <div><GigsCard /></div>
         </div>
     )
 }
