@@ -13,17 +13,9 @@ export function Gigs() {
                 
                     let gigData = [];
                     for(let i=0 ; i<data.length; i++) {
-                        gigData[i] = [data[i].datetime, data[i].venue.city, data[i].venue.country]
+                        gigData[i] = [data[i].datetime.slice(0,10), data[i].venue.city, data[i].venue.country]
                     }
-                
-
-
                 setGigs(gigData)
-
-
-
-
-
             } catch(err) {
                 console.warn(err);
             }
