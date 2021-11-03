@@ -7,13 +7,16 @@ export const GigsCard = () => {
     useEffect(() => {
         const fetchGigs = async () => {
             try {
-                let { data } = await axios.get('https://rest.bandsintown.com/artists/fisher/events?app_id=510');
-                setGigs(data)
+                let opts = { headers: {'Accept': 'application/json'} }
+                let { data } = await axios.get('https://rest.bandsintown.com/artists/fisher/events?app_id=510', opts);
+                setGigs(data.datetime)
+                console.log(data.description)
             } catch(err) {
                 console.warn(err);
             }
         }
         fetchGigs()
+        
     }, [])
     return (
         gigs.map(gig => {
@@ -25,4 +28,3 @@ export const GigsCard = () => {
     )
 }
 
-// {gigs.venue.city}, {gigs.venue.country}
